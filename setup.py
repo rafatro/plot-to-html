@@ -1,18 +1,15 @@
-from setuptools import setup, find_packages
-import codecs
-import os
+import setuptools
 
-VERSION = '0.0.1'
-DESCRIPTION = 'Python library to create a static .html file with text and charts using Google Charts API'
+DESCRIPTION = 'Creates a static .html file with charts using Google Charts API'
 
-# Setting up
-setup(
-    name="plot-to-html",
-    version=VERSION,
+setuptools.setup(
+    name="plot2html",
+    version="0.0.3",
     author="Rafael Rodrigues Troiani",
-    author_email="<rafael.r.troiani@gmail.com>",
+    author_email="rafael.r.troiani@gmail.com",
     description=DESCRIPTION,
-    packages=find_packages(),
+    package_dir={"": "src"},
+    packages=setuptools.find_packages(where="src"),
     install_requires=[],
     keywords=['python', 'Google Charts', 'html'],
     classifiers=[
