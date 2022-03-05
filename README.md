@@ -8,7 +8,7 @@ On the command line:
 pip install plot2html
 ```
 
-On your python file
+On your python file:
 ```python
 import pandas as pd
 from plot2html import CreateReport
@@ -35,8 +35,11 @@ rep.text('''This text is an explanation about the chart to the left.<br>
 The first chart above shows data from <a href='https://meteostat.net/'>Meteostat</a>, that provides open source data about meteorology.<br>
 You can see Rome temperatures follow the same trend as London's, because both cities are in the northern hemisphere, but Rome is a bit hotter, especialy on the summer.
 ''',width="half")
+
+rep.exporthtml("C:/Users/rafae/Desktop/plot2html/tests/index.html")
 ```
 
+You will get this output:
 ![example screenshot](/tests/example.jpg)
 
 This is just the begining.
