@@ -42,4 +42,15 @@ You will get this output:
 
 ![example screenshot](https://raw.githubusercontent.com/rafatro/plot2html/main/tests/example.jpg)
 
-This is just the begining.
+
+### Main arguments
+
+`Data`: pandas DataFrame with the columns that are going to be used as either as the horizontal axis or the series of the chart.<br>
+`x`: name of the column that will be used as horizonal axis of the chart<br>
+`y`: name of the columns that will be used as series of the chart.<br>
+`type`: either 'line' or 'column'. Other alternatives on development.<br>
+`width`: how much horizontal space of the screen is going to be occupied by the chart (or text). Possibilities: 'full' (default), 'half', 'third', '2-thirds' or 'quarter'.<br>
+`height`: height of the chart in pixels.<br>
+`option`: several parameters to be passed to Google Chart API. See all of them on [their documentation site](https://developers.google.com/chart/interactive/docs/gallery/linechart#configuration-options). But the notation is a bit different: Instead of `options={hAxis:{title: 'Time',textStyle:{color: '#01579b',fontSize:20}}}`, you should add extra `'` like this: `options={'hAxis':{'title': 'Time','textStyle':{'color': '#01579b','fontSize':20}}}`
+
+## This is just the begining.
