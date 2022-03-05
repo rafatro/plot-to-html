@@ -8,13 +8,17 @@ On the command line:
 pip install plot2html
 ```
 
-On your python file:
+Example data:
 ```python
 import pandas as pd
+temp = pd.read_csv('https://raw.githubusercontent.com/rafatro/plot2html/main/tests/Temperature_London_Rome.csv',parse_dates=[0])
+```
+
+Your python code:
+```python
 from plot2html import CreateReport
 rep = CreateReport("Example of plot2html Report")
 rep.text("<h2>Smart title you can create</h2>This is an example what what you can do with plot2html.")
-temp = pd.read_csv('https://raw.githubusercontent.com/rafatro/plot2html/main/tests/Temperature_London_Rome.csv',parse_dates=[0])
 options = {'title': 'Average temperature at London and Rome',
            'hAxis': {'title': 'Date'},
            'vAxis': {'title': 'Average Daily Temperature (Celsius)'},
@@ -35,6 +39,7 @@ rep.exporthtml("C:/Users/rafae/Desktop/plot2html/tests/index.html")
 ```
 
 You will get this output:
-![example screenshot](/tests/example.jpg)
+
+![example screenshot](https://raw.githubusercontent.com/rafatro/plot2html/main/tests/example.jpg)
 
 This is just the begining.
