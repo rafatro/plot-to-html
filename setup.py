@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="plot2html",
-    version="0.0.9",
+    version="0.0.10",
     author="Rafael Rodrigues Troiani",
     author_email="rafael.r.troiani@gmail.com",
     description=DESCRIPTION,
