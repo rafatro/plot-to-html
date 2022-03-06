@@ -1,3 +1,7 @@
+from datetime import datetime
+from pandas import isna
+from pandas.api.types import is_datetime64_any_dtype, is_numeric_dtype
+
 class CreateReport:
     "Creates a static .html file with charts using Google Charts API"
     
@@ -48,7 +52,7 @@ function drawChart''' + str(self.chartCount) + '''() {
             if (is_datetime64_any_dtype(data[x])): self.html_string+="[new Date("+str(row[x].year)+","+str(row[x].month-1)+","+str(row[x].day)+"),";
             else: self.html_string += "[" + str(row[x]) + ",";
             for a in y:
-                if (pd.isna(row[a])): self.html_string += "null,";
+                if (isna(row[a])): self.html_string += "null,";
                 else: self.html_string += str(row[a]) + ",";
             self.html_string += "],\n"
         self.html_string += "]);\n";
@@ -64,6 +68,7 @@ function drawChart''' + str(self.chartCount) + '''() {
         f = open(full_path, "w")
         html_string_full = '''
 <!DOCTYPE html>
+<!-- This .html file was created using Python Library plot2html -->
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -106,7 +111,7 @@ body {
 <div class="fixed-header" id="myHeader">
   <div>link</div>
   <div>''' + self.title + '''</div>
-  <div>''' + datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S") + '''</div>
+  <div>''' + datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S") + ''' UTC</div>
 </div>
 <script type="text/javascript">
   function adjustHeaderHeight(){
@@ -122,3 +127,4 @@ adjustHeaderHeight();
         html_string_full += "</div></body></html>"
         f.write(html_string_full)
         f.close()
+        print("File exported to "+full_path);
