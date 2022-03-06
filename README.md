@@ -33,12 +33,12 @@ options = {'title': 'Average temperature at London and Rome',
 # We want a chart that shows each location as a different serie (each loacation should be a different line on the chart).
 # Since the location is one column on the dataframe, we need to pivot the dataframe so each location becomes a column.
 report.plot(data=temperature.pivot(index='date', columns='location', values='tavg').reset_index()
-         ,x='date'
-         ,y=['Rome','London']
-         ,type='line'
-         ,width='2-thirds'
-         ,height=400
-         ,options=options)
+            ,x='date'
+            ,y=['Rome','London']
+            ,type='line'
+            ,width='2-thirds'
+            ,height=400
+            ,options=options)
 
 report.text('''This text is an explanation about the chart to the left.<br>
 It shows data from <a href='https://meteostat.net/'>Meteostat</a>, that provides open source data about meteorology.<br>
@@ -48,12 +48,12 @@ You can see Rome temperatures follow the same trend as London's, because both ci
 report.exporthtml("C:/Users/rafae/Desktop/plot2html/tests/index.html")
 ```
 
-You will get this output:
+The .html file will look like this:
 
 ![example screenshot](https://raw.githubusercontent.com/rafatro/plot2html/main/tests/example.jpg)
 
 
-### Main arguments
+### Main arguments for the plot function
 
 `Data`: pandas DataFrame with the columns that are going to be used as either as the horizontal axis or the series of the chart.<br>
 `x`: name of the column that will be used as horizontal axis of the chart<br>
