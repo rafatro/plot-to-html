@@ -34,7 +34,7 @@ options = {'title': 'Average temperature at London and Rome',
 # Since the location is one column on the dataframe, we need to pivot the dataframe so each location becomes a column.
 report.plot(data=temperature.pivot(index='date', columns='location', values='tavg').reset_index()
          ,x='date'
-         ,y=['London','Rome']
+         ,y=['Rome','London']
          ,type='line'
          ,width='half'
          ,height=400
