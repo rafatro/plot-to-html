@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+<!-- This .html file was created using Python Library plot2html -->
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -40,9 +41,9 @@ body {
 </head>
 <body>
 <div class="fixed-header" id="myHeader">
-  <div>link</div>
+  <div></div>
   <div>Example of plot2html Report</div>
-  <div>2022-03-06 02:31:56 UTC</div>
+  <div>2022-03-06 02:46:50 UTC</div>
 </div>
 <script type="text/javascript">
   function adjustHeaderHeight(){
@@ -53,11 +54,11 @@ adjustHeaderHeight();
 </script>
 <div class="content">
 <div class='flex-container'>
-<div style='width:100.00%;'><p><h2>Smart title you can create</h2>This is an example what what you can do with plot2html.</p></div>
+<div style='width:100.00%;'><p><h2>Smart title you can create</h2>This is an example what what you can do with plot2html library. Enjoy</p></div>
 </div>
 <div class='flex-container'>
 
-<div id="chart_div2" style="width:50.00%;height:400px;"></div>
+<div id="chart_div2" style="width:66.67%;height:400px;"></div>
 <script type="text/javascript">
 google.charts.load('current', {packages: ['corechart']});
 google.charts.setOnLoadCallback(drawChart2);
@@ -1224,12 +1225,12 @@ data.addRows([
 [new Date(2022,1,27),7.2,4.7,],
 [new Date(2022,1,28),7.0,8.0,],
 ]);
- var options = {'title': 'Average temperature at London and Rome', 'hAxis': {'title': 'Date'}, 'vAxis': {'title': 'Average Daily Temperature (Celsius)'}, 'colors': ['#a52714', '#097138']};
+ var options = {'title': 'Average daily temperature at Rome and London', 'hAxis': {'title': 'Date'}, 'vAxis': {'title': 'Average Daily Temperature (Celsius)'}, 'colors': ['#a52714', '#097138']};
 var chart = new google.visualization.LineChart(document.getElementById('chart_div2'));
       chart.draw(data, options);}
 </script>
-        <div style='width:50.00%;'><p>This text is an explanation about the chart to the left.<br>
-The first chart above shows data from <a href='https://meteostat.net/'>Meteostat</a>, that provides open source data about meteorology.<br>
+        <div style='width:33.33%;'><p>This text is an explanation about the chart to the left.<br>
+It shows data from <a href='https://meteostat.net/'>Meteostat</a>, that provides open source data about meteorology.<br>
 You can see Rome temperatures follow the same trend as London's, because both cities are in the northern hemisphere, but Rome is a bit hotter, especialy on the summer.
 </p></div>
 </div>
