@@ -109,7 +109,7 @@ body {
 </head>
 <body>
 <div class="fixed-header" id="myHeader">
-  <div>link</div>
+  <div></div>
   <div>''' + self.title + '''</div>
   <div>''' + datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S") + ''' UTC</div>
 </div>
