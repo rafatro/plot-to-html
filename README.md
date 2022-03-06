@@ -36,14 +36,14 @@ report.plot(data=temperature.pivot(index='date', columns='location', values='tav
          ,x='date'
          ,y=['Rome','London']
          ,type='line'
-         ,width='half'
+         ,width='2-thirds'
          ,height=400
          ,options=options)
 
 report.text('''This text is an explanation about the chart to the left.<br>
-The first chart above shows data from <a href='https://meteostat.net/'>Meteostat</a>, that provides open source data about meteorology.<br>
+It shows data from <a href='https://meteostat.net/'>Meteostat</a>, that provides open source data about meteorology.<br>
 You can see Rome temperatures follow the same trend as London's, because both cities are in the northern hemisphere, but Rome is a bit hotter, especialy on the summer.
-''',width="half")
+''',width="third")
 
 report.exporthtml("C:/Users/rafae/Desktop/plot2html/tests/index.html")
 ```
